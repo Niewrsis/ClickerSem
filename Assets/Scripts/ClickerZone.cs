@@ -9,8 +9,8 @@ public class ClickerZone : MonoBehaviour
 
     [SerializeField] private Button _clickZone;
     
-    public static int Money;
-    private int _clickForce = 1;
+    public static int Money = 0;
+    public static int ClickForce = 1;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class ClickerZone : MonoBehaviour
 
     void Click()
     {
-        Money += _clickForce;
+        Money += ClickForce;
         _moneyText.text = $"{Money}$";
         _moneyTextMenu.text = $"{Money}$";
     }
