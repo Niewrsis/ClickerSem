@@ -8,8 +8,6 @@ public class PassiveIncome : MonoBehaviour
     private float passiveIncomeInterval = .5f;
     private float nextPassiveIncomeTime = 0f;
     
-    [SerializeField] private TextMeshProUGUI _moneyText;
-    [SerializeField] private TextMeshProUGUI _moneyTextMenu;
     [SerializeField] private TextMeshProUGUI _costText;
     [SerializeField] private Button _button;
 
@@ -39,8 +37,6 @@ public class PassiveIncome : MonoBehaviour
     void PassiveForce()
     {
             ClickerZone.Money += _passiveForce;
-            _moneyText.text = $"{ClickerZone.Money}$";
-            _moneyTextMenu.text = $"{ClickerZone.Money}$";
     }
 
     void PassiveCheck()
@@ -51,8 +47,6 @@ public class PassiveIncome : MonoBehaviour
             _passiveCost = _passiveCost * 2;
             _passiveForce++;
             _costText.text = $"{_passiveCost}$";
-            _moneyText.text = $"{ClickerZone.Money}$";
-            _moneyTextMenu.text = $"{ClickerZone.Money}$";
             _passiveIncome = true;
         }
 

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using Button = UnityEngine.UI.Button;
@@ -9,7 +10,7 @@ public class ClickerZone : MonoBehaviour
 
     [SerializeField] private Button _clickZone;
     
-    public static int Money = 0;
+    public static float Money = 0;
     public static int ClickForce = 1;
 
     private void Start()
@@ -18,6 +19,12 @@ public class ClickerZone : MonoBehaviour
         _moneyTextMenu.text = $"{Money}$";
         
         _clickZone.onClick.AddListener(Click);
+    }
+
+    private void Update()
+    {
+        _moneyText.text = $"{Money}$";
+        _moneyTextMenu.text = $"{Money}$";
     }
 
     void Click()
