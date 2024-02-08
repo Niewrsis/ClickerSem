@@ -23,7 +23,7 @@ public class ClickForce : MonoBehaviour
         {
             ClickerZone.ClickForce++;
             ClickerZone.Money -= _upgradeCost;
-            _upgradeCost = _upgradeCost * 2;
+            _upgradeCost = _upgradeCost + 100;
             _costText.text = $"{_upgradeCost}$";
         }
     }

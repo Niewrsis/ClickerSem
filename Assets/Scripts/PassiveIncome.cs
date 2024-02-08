@@ -44,11 +44,10 @@ public class PassiveIncome : MonoBehaviour
         if (ClickerZone.Money >= _passiveCost)
         {
             ClickerZone.Money -= _passiveCost;
-            _passiveCost = _passiveCost * 2;
+            _passiveCost += 200;
             _passiveForce++;
             _costText.text = $"{_passiveCost}$";
             _passiveIncome = true;
         }
-
     }
 }

@@ -7,6 +7,8 @@ public class ClickerZone : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TextMeshProUGUI _moneyTextMenu;
+    [SerializeField] private TextMeshProUGUI _moneyTextEconomy;
+    [SerializeField] private TextMeshProUGUI _moneyTextMillitary;
 
     [SerializeField] private Button _clickZone;
     
@@ -25,6 +27,8 @@ public class ClickerZone : MonoBehaviour
     {
         _moneyText.text = $"{Money}$";
         _moneyTextMenu.text = $"{Money}$";
+        _moneyTextEconomy.text = $"{Money}$";
+        _moneyTextMillitary.text = $"{Money}$";
     }
 
     void Click()
